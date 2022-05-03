@@ -1,0 +1,32 @@
+GET http://localhost:3000/users
+
+### ^ Show all users
+
+GET http://localhost:3000/users/626f149d12073c843f38ff67
+
+
+### ^ Show individual user by _id value
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "newName" : "admin2",
+    "newPassword" : "123"
+}
+
+### ^ Add a new user
+
+PATCH http://localhost:3000/users/626efc0a77205e482937052c
+Content-Type: application/json
+
+{
+    "name" : "PaulC"
+}
+
+### ^ Update username and/or password 
+
+DELETE http://localhost:3000/users/626ffa52ecac066504fc4346
+
+### ^ Delete specific user by _id
+
